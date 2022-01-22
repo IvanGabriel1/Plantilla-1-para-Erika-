@@ -1,0 +1,257 @@
+/**** Custom Properties ****/
+
+:root {
+  --first-color: #3b005f;
+  --first-alpha75-color: rgba(59, 0, 95, 0.75);
+  --first-alpha50-color: rgba(59, 0, 95, 0.5);
+  --first-alpha25-color: rgba(59, 0, 95, 0.25);
+  --second-color: #038200;
+  --second-alpha75-color: rgba(3, 130, 0, 0.75);
+  --second-alpha25-color: rgba(3, 130, 0, 0.25);
+  --third-color: #f36600;
+  --third-alpha75-color: rgba(243, 102, 0, 0.75);
+  --third-alpha25-color: rgba(243, 102, 0, 0.25);
+  --link-color: #509ee3;
+  --title-color: #f36600;
+  --white-color: #ffffff;
+  --red-color: #ff0000;
+  --gray-light-color: #d6d6d6;
+  --gray-color: #949292;
+  --gray-dark-color: #6b6b6b;
+  --black-color: #000000;
+  --white-alpha50-color: rgba(255, 255, 255, 0.5);
+  --black-alpha50-color: rgba(0, 0, 0, 0.5);
+  --font: "caveat", "sans-serif";
+  --max-width: 1200px;
+  --box-shadow: 0rem 0rem 2rem rgba(246, 0, 0, 1);
+}
+
+/**** Reset ****/
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--first-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/**** Components ****/
+
+/* Circulo de peligro */
+
+.circle-container {
+  max-width: 500px;
+}
+
+.circle svg {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.donut-gradient {
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: radial-gradient(
+      var(--first-color) 40%,
+      black 0%,
+      transparent 40%
+    ),
+    conic-gradient(var(--red-color) 0% 80%, rgb(139, 0, 0) 80% 100%);
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+}
+
+/* Skills Bars */
+
+.skill,
+.percentage {
+  width: auto;
+  height: auto;
+  color: var(--third-color);
+  display: inline-block;
+  margin: 0;
+}
+
+.skill {
+  float: left;
+}
+
+.percentage {
+  float: right;
+}
+
+.skill-container {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  max-width: 500px;
+}
+
+.skill-container progress {
+  width: 100%;
+  max-width: 500px;
+  height: 1rem;
+  background-color: var(--second-color);
+}
+
+/* Weapon */
+
+.weapon-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: medium solid var(--third-color);
+  transition: box-shadow 2s ease-in-out 250ms,
+    border-radius 2s ease-in-out 250ms;
+}
+
+.weapon-container:hover {
+  box-shadow: var(--box-shadow);
+  border-radius: 2rem;
+}
+
+.weapon1 {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transition: opacity 2s ease-in-out 250ms;
+}
+
+.weapon1:hover {
+  opacity: 0;
+}
+
+.weapon-blood {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out 250ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2rem;
+}
+
+.weapon-blood:hover {
+  opacity: 1;
+}
+
+/**** Utilities ****/
+.title {
+  color: var(--third-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 500px;
+}
+/**** Site Styles ****/
+
+.inicio audio {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 90vw;
+  max-width: 500px;
+  height: 2rem;
+}
+
+.inicio img {
+  width: 90vw;
+  max-width: 500px;
+  height: auto;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  object-fit: cover;
+  border: medium solid var(--third-color);
+  box-shadow: var(--box-shadow);
+}
+
+.description textarea {
+  width: 90vw;
+  max-width: 500px;
+  height: 70vh;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  background-color: var(--second-color);
+  overflow-y: scroll;
+  border: medium solid var(--third-color);
+}
