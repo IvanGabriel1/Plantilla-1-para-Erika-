@@ -281,7 +281,7 @@ p {
   box-shadow: var(--box-shadow);
 }
 
-.description textarea {
+.historia {
   width: 90vw;
   max-width: 500px;
   height: 70vh;
@@ -290,4 +290,15 @@ p {
   background-color: var(--second-color);
   overflow-y: scroll;
   border: medium solid var(--third-color);
+}
+
+.historia h4,
+p {
+  display: inline;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
 }
