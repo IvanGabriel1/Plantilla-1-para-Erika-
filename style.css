@@ -95,6 +95,40 @@ p {
 
 /**** Components ****/
 
+/* Carousel */
+.carousel {
+  width: 40vw;
+  height: 200px;
+  max-width: 300px;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  display: flex;
+  border: medium solid var(--third-color);
+  overflow-x: hidden;
+}
+
+.carousel-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: both mandatory;
+}
+
+.carousel-slide {
+  scroll-snap-align: center;
+}
+
+.carousel-slide-content img {
+  width: 38.8vw;
+  height: 200px;
+  max-width: 294px;
+  min-width: 194px;
+}
+
 /* Circulo de peligro */
 
 .circle-container {
@@ -174,8 +208,10 @@ p {
 /* Weapon */
 
 .weapon-container {
-  width: 200px;
+  width: 40vw;
   height: 200px;
+  max-width: 300px;
+  min-width: 200px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
