@@ -327,7 +327,7 @@ p {
   color: var(--second-color);
 }
 
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 768px) {
   body {
     margin-right: auto;
     margin-left: auto;
@@ -373,6 +373,20 @@ p {
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 6;
+  }
+
+  .weapon-container {
+    width: 25vw;
+    max-width: 300px;
+  }
+
+  .carousel {
+    width: 25vw;
+    max-width: 300px;
+  }
+
+  .carousel img {
+    width: 100%;
   }
 
   .enemis {
